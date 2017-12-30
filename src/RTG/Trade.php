@@ -8,7 +8,7 @@
 	* GNU License!
 */
 
-namespace RTG\Trade;
+namespace RTG;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
