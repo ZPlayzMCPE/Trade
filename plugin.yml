@@ -1,9 +1,9 @@
 name: Trade
-version: 1.0.0 BETA
+version: 1.0.0-BETA
 author: RTGTeam
 description: People has been dreaming for ages, now its a reality!
 main: RTG\Trade\Trade
-api: [2.0.0, 2.1.0]
+api: [3.0.0-ALPHA9, 3.0.0-ALPHA10]
 commands:
   trade:
    usage: "/trade"
