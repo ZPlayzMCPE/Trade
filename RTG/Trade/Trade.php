@@ -26,7 +26,7 @@ class Trade extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
-	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
+	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
 		switch(strtolower($cmd->getName())) {
 		
 				case "trade":
@@ -36,6 +36,7 @@ class Trade extends PluginBase implements Listener {
 					$sender->sendMessage("");
 					$sender->sendMessage("Your item in hand!\n- $hid");
 					$sender->sendMessage(TF::RED . "Only Items can be trade not blocks or items with enchantments!");
+				        return true;
 					
 						if(isset($args[0])) {
 							switch(strtolower($args[0])) {
@@ -70,13 +71,16 @@ class Trade extends PluginBase implements Listener {
 												$item->setCustomName($cname);
 										
 												$sender->sendMessage("[Trade] Succeeded, check your inventory!");
+												return true;
 											}
 											else {
 												$sender->sendMessage("[Trade] You need atleast 2500!");
+												return true;
 											}
 										}
 										else {
 											$sender->sendMessage("[Trade] You need to hold a Diamond Sword in your hand!");
+											return true;
 										}
 									}
 									else {
@@ -105,6 +109,7 @@ class Trade extends PluginBase implements Listener {
            if($sword->getId() === 276 && $sword->getCustomName() === "§bDiamond Sword\n§eSharpness II\nConfuser II") {
 							$hitget->addEffect(Effect::getEffect(9)->setDuration(13 * 20)->setAmplifier(1));
 							$hitget->sendMessage("[CE] You have been effected by a Custom Enchanted Sword! You better get rid of it!");
+		                                        return true;
            }
 				}
 	}
