@@ -37,7 +37,7 @@ class Trade extends PluginBase implements Listener {
 					$sender->sendMessage("-- Trade V 1.0.1 --");
 					$sender->sendMessage("");
 					$sender->sendMessage("Your item in hand!\n- $hid");
-					$sender->sendMessage(TF::RED . "Only Items can be trade not blocks or items with enchantments!");
+					$sender->sendMessage(TextFormat::RED . "Only Items can be trade not blocks or items with enchantments!");
 				        return true;
 					
 						if(isset($args[0])) {
