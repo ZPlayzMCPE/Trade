@@ -19,6 +19,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\event\EntityDamageEvent;
 
 class Trade extends PluginBase implements Listener {
 
